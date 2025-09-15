@@ -1,0 +1,10 @@
+|div var num2 num1 mlist cont|
+mlist:= OrderedCollection new.
+num1 := (UIManager default request: 'Escribí un número minimo:') asInteger.
+num2 := (UIManager default request: 'Escribí un número maximo:') asInteger.
+Transcript clear.
+Transcript show: num1 printString , ' ', num2 printString; cr.
+
+[ num1 > num2 ] whileFalse: [ div:= num1. var:= 0. cont:= 0.[div > 1]whileTrue:[ ((num1\\div)=0)ifTrue: [var:= var+(num1/div)]. div:= div-1]. div:= var. [div > 1]whileTrue:[ ((var\\div)=0)ifTrue: [cont:= cont+(var/div)]. div:= div-1]. (num1=cont)ifTrue:[mlist add: num1. mlist add: var]. num1:= num1+1].
+
+Transcript show: mlist; cr.
