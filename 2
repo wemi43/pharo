@@ -1,0 +1,4 @@
+|N M|
+N:= (UIManager default request: 'Ingresa cuantos numeros N quieres  saber que son multiplos de M') asInteger.
+M:= (UIManager default request: 'Ingrese el numero que quiere saber sus multiplos')asInteger.
+1 to: N do: [:i| Transcript show: M*i; cr ].
