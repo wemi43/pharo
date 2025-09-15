@@ -1,0 +1,9 @@
+|fibo a b c|
+Transcript clear.
+fibo:= (UIManager default request: 'Ingrese el n-esmio numero: ')asInteger. 
+a:= 0.
+b:= 1.
+c:=0.
+1 to: fibo do: [:i| c:= a + b. a:=b. b:=c].
+
+Transcript show: a; cr.
