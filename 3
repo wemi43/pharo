@@ -1,0 +1,8 @@
+|array array2|
+Transcript clear.
+array:= OrderedCollection new.
+array2:= OrderedCollection new.
+1 to: 30 do: [:i| array add: (Random new nextInt: 100)].
+Transcript show: array; cr.
+2 to: array size by: 2 do: [:i|array2 add: (array at:i)].
+Transcript show: array2; cr.
