@@ -1,0 +1,7 @@
+|str str2 str3|
+Transcript clear.
+str:='String de entrada JIJIJIJI'.
+str2:= str findTokens: ' ,.?'.
+str3:= OrderedCollection new.
+str2 do:[:pal| str3 add: pal reversed].
+Transcript show: str3 asString; cr.
