@@ -1,0 +1,7 @@
+|str str2 cont|
+Transcript clear.
+str:='Esto es una palabra palindroma: radar somos salas'.
+str2:= str findTokens: ' .,!"#$%&/()=?¡¿´+}{-:'.
+cont:= 0.
+str2 do:[:pal| (pal = pal reversed)ifTrue: [cont:= cont+1]].
+Transcript show: 'Las palabras palindromas encontradas fueron:', cont asString; cr.
