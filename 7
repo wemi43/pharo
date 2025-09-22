@@ -1,0 +1,5 @@
+|str str2 str3|
+Transcript clear.
+str:='PingA de entradA JUAJUAJUAJUA'.
+1 to: str size do:[:i| ((str at: i)=$A)ifTrue: [str at: i put: $u]].
+Transcript show: str asString; cr.
