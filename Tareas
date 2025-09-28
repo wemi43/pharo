@@ -5,3 +5,11 @@ str2:= str findTokens: ' .,!"#$%&/()=?¡¿´+}{-:'.
 cont:= 0.
 str2 do:[:pal| (pal = pal reversed)ifTrue: [cont:= cont+1]].
 Transcript show: 'Las palabras palindromas encontradas fueron:', cont asString; cr.
+
+|str dic contador cont|
+Transcript clear.
+dic:= Dictionary new.
+dic at: 'si' put: ''.
+str:= UIManager default request: 'Ingrese una frase toa epica: '.
+str:= str copyReplaceAll:'si' with: ''.
+str.
