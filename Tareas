@@ -13,3 +13,15 @@ dic at: 'si' put: ''.
 str:= UIManager default request: 'Ingrese una frase toa epica: '.
 str:= str copyReplaceAll:'si' with: ''.
 str.
+
+
+|str dic contador cont|
+Transcript clear.
+str:= UIManager default request: 'Ingrese una frase toa epica: '.
+str:= str findTokens: ' ,.?:'.
+1 to: str size do:[:j| 
+	j+1 to: str size do: [:i| 
+		((str at: j) = (str at: i)) ifTrue: [ str at: i put: ''. ]
+		] 
+	].
+str:= str joinUsing: ' '.
